@@ -8,4 +8,11 @@ function add() {
   const req = {
     newlist: newlist.value,
   };
+  fetch("/", {
+    method: "post",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(req),
+  });
 }
